@@ -1,9 +1,15 @@
 (ns ^:figwheel-always hello-world.core
     (:require
-     [goog.i18n :as i18n]
-              [reagent.core :as reagent :refer [atom]]))
+     [reagent.core :as reagent :refer [atom]])
+    (:import goog.i18n.NumberFormat
+             goog.i18n.NumberFormat.Format))
 
 (enable-console-print!)
+
+(def fmt (NumberFormat. Format.CURRENCY))
+(def currency (.format fmt 9999.99))
+
+(println "Currency test: " currency)
 
 (println "Edits to this text should show up in your developer console.")
 

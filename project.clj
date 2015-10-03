@@ -35,14 +35,14 @@
                          :pretty-print false}}]}
 
   :figwheel {
-             ;; :http-server-root "public" ;; default and assumes "resources" 
+             ;; :http-server-root "public" ;; default and assumes "resources"
              ;; :server-port 3449 ;; default
-             ;; :server-ip "127.0.0.1" 
+             ;; :server-ip "127.0.0.1"
 
              :css-dirs ["resources/public/css"] ;; watch and update CSS
 
              ;; Start an nREPL server into the running figwheel process
-             ;; :nrepl-port 7888
+             :nrepl-port 7888
 
              ;; Server Ring Handler (optional)
              ;; if you want to embed a ring handler into the figwheel http-kit
@@ -63,5 +63,5 @@
              ;; :repl false
 
              ;; to configure a different figwheel logfile path
-             ;; :server-logfile "tmp/logs/figwheel-logfile.log" 
+             ;; :server-logfile "tmp/logs/figwheel-logfile.log"
              })
